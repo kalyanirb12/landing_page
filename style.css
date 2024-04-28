@@ -1,0 +1,678 @@
+:root {
+  --clr-accent-400: hsla(122, 39%, 49%, 1);
+  --clr-accent-300: hsla(122, 38%, 57%, 1);
+  --clr-neutral-100: hsla(210, 10%, 58%, 1);
+
+  --clr-neutral-400: hsla(0, 0%, 44%, 1);
+  --clr-neutral-500: hsla(0, 0%, 30%, 1);
+  --clr-neutral-900: hsla(200, 19%, 18%, 1);
+
+  --clr-primary-400: hsla(0, 0%, 100%, 1);
+  --clr-primary-500: hsla(210, 31%, 97%, 1);
+
+  --ff-primary: "Inter", sans-serif;
+  --ff-body: var(--ff-primary);
+  --ff-heading: var(--ff-primary);
+
+  --fw-regular: 400;
+  --fw-semi-bold: 500;
+  --fw-bold: 600;
+  --fw-boldest: 700;
+
+  --fs-400: 14px;
+  --fs-500: 16px;
+  --fs-600: 36px;
+  --fs-700: 64px;
+
+  --fs-body: var(--fs-400);
+  --fs-primary-heading: var(--fs-700);
+  --fs-secondary-heading: var(--fs-600);
+
+  --fs-nav: var(--fs-500);
+  --fs-button: var(--fs-500);
+
+  --size-100: 0.25rem;
+  --size-200: 0.5rem;
+  --size-300: 0.75rem;
+  --size-400: 1rem;
+  --size-500: 1.25rem;
+  --size-600: 2rem;
+  --size-700: 3rem;
+  --size-800: 4rem;
+  --size-900: 5rem;
+}
+@media (min-width: 50em) {
+  :root {
+    --fs-700: 3.5rem;
+    --fs-600: 2.5rem;
+  }
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+* {
+
+  margin: 0px;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+html,
+body {
+
+  height: 100%;
+  
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  display: block;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+/*utility classes*/
+.text-primary-400 {
+  color: var(--clr-primary-400);
+}
+.text-neutral-500 {
+  color: var(--clr-neutral-500);
+}
+.text-neautral-400 {
+  color: var(--clr-neutral-400);
+}
+
+.bg-primary-400 {
+  background-color: var(--clr-primary-400);
+}
+.bg-primary-500 {
+  background-color: var(--clr-primary-500);
+}
+.bg-neutral-900 {
+  background-color: var(--clr-neutral-900);
+}
+
+.fw-boldest {
+  font-weight: var(--fw-boldest);
+}
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+.fw-semi-bold {
+  font-weight: var(--fw-semi-bold);
+}
+.fs-primary-heading {
+  font-size: var(--fs-primary-heading);
+}
+.fs-secondary-heading {
+  font-size: var(--fs-secondary-heading);
+}
+.fs-body {
+  font-size: var(--fs-body);
+}
+
+.primary-footer {
+  background-color: hsla(200, 19%, 18%, 1); /* Black background color */
+  color: #fff; /* White text color */
+  padding: 20px; /* Add some padding for space inside */
+}
+.demo {
+  background-color: hsla(210, 31%, 97%, 1);
+  color: hsla(200, 19%, 18%, 1);
+}
+.updates {
+  background-color: hsla(0, 0%, 100%, 1);
+  color: hsla(200, 19%, 18%, 1);
+}
+.customers {
+  background-color: hsla(210, 31%, 97%, 1);
+  color: hsla(200, 19%, 18%, 1);
+}
+.calander {
+  background-color: hsla(0, 0%, 100%, 1);
+  color: hsla(200, 19%, 18%, 1);
+}
+.achievments {
+  background-color: hsla(210, 31%, 97%, 1);
+  color: hsla(200, 19%, 18%, 1);
+}
+.community {
+  background-color: hsla(0, 0%, 100%, 1);
+  color: hsla(200, 19%, 18%, 1);
+}
+.client {
+  background-color: hsla(0, 0%, 100%, 1);
+  color: hsla(200, 19%, 18%, 1);
+}
+.home {
+  background-color: hsla(210, 31%, 97%, 1);
+  color: hsla(200, 19%, 18%, 1);
+}
+.primary-header {
+  background-color: hsla(210, 31%, 97%, 1);
+  color: hsla(200, 19%, 18%, 1);
+}
+
+/*general styling*/
+body {
+  font-size: var(--fs-body);
+  font-family: var(--fs-body);
+  color: var(--clr-neutral-900);
+}
+
+.padding-block-900 {
+  padding-block: var(--size-900);
+}
+
+.padding-block-700 {
+  padding-block: var(--size-700);
+}
+.padding-block-400 {
+  padding-block: var(--size-400);
+}
+
+.even-columns {
+  display: flex;
+  justify-content: space-between;
+  /* gap: 450px; */
+}
+@media (min-width: 50em) {
+  .even-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+  .grid-conatiner {
+    grid-auto-flow: row;
+    grid-auto-rows: 1fr;
+  }
+}
+.client {
+
+
+  line-height: 44px;
+}
+.community-card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px;
+  line-height: 20px;
+  box-shadow:5px 5px  1px gainsboro;
+}
+.learn {
+  padding: 48px;
+}
+.achievments {
+  padding: 144px;
+}
+.calander {
+  padding: 144px;
+}
+.icons {
+  padding: 144px;
+}
+.customers {
+  padding: 48px;
+}
+.updates {
+  padding: 16px;
+}
+.demo {
+  padding: 32px;
+}
+.primary-footer {
+  padding: 125px;
+}
+
+.logo {
+  margin-top: 50px;
+}
+
+.logo {
+  display: inline-block; /* Ensures logo doesn't break to a new line */
+  margin-right: 90%;
+  margin-top: 2rem;
+}
+
+.primary-header {
+  /* text-align: center;  */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 10%;
+  padding-right: 10%;
+  height: 84px;
+  /* width: 1440px; */
+}
+
+.primary-header .logo {
+
+  margin-bottom: 2rem;
+}
+
+.primary-navigation li {
+  height: 24px;
+  top: 30px;
+  left: 425.5px;
+  gap: 10px;
+}
+
+.navbar {
+  display: inline-block;
+}
+
+.nav-list li {
+  display: inline-block;
+  margin-right: 20px;
+  justify-content: space-between;
+  font-size: var(--fs-500);
+  font-weight: var(--fw-semi-bold);
+  gap: 10px;
+}
+
+.button-login {
+  width: 77px;
+  height: 40px;
+  padding: 10px 20px 10px 20px;
+  gap: 10px;
+  border-radius: 6px 6px 6px 6px;
+  opacity: 0px;
+  color: var(--clr-accent-400);
+  border-color: var(--clr-primary-400);
+}
+.button-signup {
+  width: 91px;
+  height: 40px;
+  padding: 10px 20px 10px 20px;
+  gap: 10px;
+  border-radius: 6px 6px 6px 6px;
+  opacity: 0px;
+  background-color: var(--clr-accent-400);
+  border-color: var(--clr-accent-400);
+}
+.button-register {
+  width: 128px;
+  height: 52px;
+  background-color: var(--clr-accent-400);
+  border-color: var(--clr-accent-400);
+  border-radius: 4px;
+  padding: 14px 32px 14px 32px;
+}
+.home {
+  text-align: end;
+  display: flex;
+  justify-content: center;
+}
+
+.client {
+
+  height: 190px;
+  display: inline;
+  text-align: center;
+  line-height: 44px;
+
+}
+.client p {
+justify-content: center;
+display: flex;
+}
+.client-list {
+  display: flex;
+  justify-content: space-between;
+
+  height: 98px;
+  gap: 10px;
+  padding: 30px 0px 30px 0px;
+ 
+}
+.community {
+  text-align: center;
+
+  justify-content: space-between;
+}
+.community-heading{
+  margin-top: 70px;
+}
+.community p {
+  margin-left: 20px;
+}
+.icons {
+  justify-content: space-between;
+  text-align: center;
+  line-height: 36px;
+}
+.learn {
+  width: 1440px;
+  height: 433px;
+  margin-left: 32px;
+}
+.mobileimg {
+  width: 442px;
+  height: 433px;
+  gap: 32px;
+}
+.text-learn {
+  width: 661px;
+  height: 268px;
+  line-height: 20px;
+}
+
+.container-home {
+  text-align: left;
+  padding: 96px 144px 96px 144px;
+  line-height: 76px;
+  display: flex;
+
+  gap: 204px;
+  /* width: 1440px; */
+}
+.container-home span {
+  color: var(--clr-accent-400);
+}
+.container-home p {
+  margin-left: 10px;
+}
+
+.home-content {
+  width: 60%;
+  height: 152px;
+}
+
+.home-img {
+  width: 391px;
+  height: 407px;
+}
+
+.btns {
+  width: 182px;
+  height: 40px;
+  top: 22px;
+  left: 1138px;
+  gap: 14px;
+}
+.grid-conatiner {
+  display: flex;
+  flex-direction: row;
+}
+.icons.even-columns {
+  height: 280px;
+  justify-content: space-between;
+  padding: 0px 144px 0px 144px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.icons.even-columns.community {
+  width: 299px;
+  height: 260px;
+  border-radius: 8px;
+  padding: 80%;
+  gap: 1px;
+  justify-content: space-between;
+  margin-left: 80%;
+  line-height: 20px;
+  margin-top: 20px;
+}
+.text-learn {
+  line-height: 20px;
+  padding-left: 140px;
+}
+.text-learn h1 {
+  line-height: 44px;
+  gap: 50px;
+  display: flex;
+  margin-left: 20px;
+}
+.button-learn {
+  width: 151px;
+  height: 52px;
+  border-radius: 4px;
+  padding: 14px 32px 14 px 32px;
+  gap: 10px;
+  background-color: var(--clr-accent-400);
+  border-color: var(--clr-accent-400);
+  margin-top: 20px;
+  margin-left: 30px;
+}
+.text-learn p {
+  margin-top: 20px;
+  margin-left: 30px; /* Adjust the value as needed */
+}
+.mobileimg {
+  margin-left: 90px;
+}
+.achievments span {
+  color: var(--clr-accent-400);
+}
+
+.achievments h1
+p {
+  margin-left: 90px;
+}
+
+.grid-conatiner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  margin-right: 120px;
+}
+.achievments.description h1 {
+  line-height: 44px;
+}
+.achievments.description p {
+  line-height: 24px;
+  margin-left: 60px;
+}
+.calander.cal-img {
+  width: 441.53px;
+  height: 433.4px;
+}
+.calander h1 p {
+  margin-left: 20px;
+  margin-right: 150px;
+}
+.calander p {
+  margin-top: 20px;
+}
+.even-columns-customers{
+
+  justify-content: center;
+  display: flex;
+}
+.customers{
+  width:100%;
+  height:390px ;
+}
+.customer-img {
+  width: 326px;
+  height: 326px;
+  border-radius: 8px;
+  margin-left: 100px;
+}
+.customer-description {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 20px;
+  width: 748px;
+  height: 324px;
+  margin-right: 300px;
+  line-height: 24px;
+  padding: 40px 40px 40px 40px;
+}
+.customer-description h1 {
+  color: var(--clr-accent-400);
+ 
+  gap:8px
+}
+.customer-list {
+  display: flex;
+  gap:32px;
+ 
+  margin-top: 10px;
+  justify-content: space-between;
+
+}
+.customer-description span{
+  columns: var(--clr-accent-400);
+}
+.updates{
+  text-align: center;
+  gap:8px;
+ 
+}
+.temp h1{
+  margin-bottom: 40px;
+
+}
+
+.update-img{
+  height: 366px;
+  justify-content: space-between;
+  padding: 0px 144px 0px 144px;
+  margin-top: 50px;
+  gap:10px;
+ padding-left: 2\40px;
+ padding-right: 20px;
+
+}
+.read{
+  background-color: var( --clr-primary-500);
+  width:317px;
+  height: 178px;
+  border-radius: 16px;
+  gap:16px;
+
+  position: absolute;
+  top:250px;
+  left:170px;
+  text-align: center;
+  justify-content: center;
+  
+}
+.client-list{
+  padding: 40px 120px 0px 120px;
+}
+.temp{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 50px;
+}
+.description{
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.grid-conatiner .ic2 img{
+  height:48px;
+  width: 48px;
+}
+.customer-description span{
+  color:var(  --clr-accent-400);
+}
+.arrow{
+  display: flex;
+  justify-content: center;
+}
+.update-card{
+  position: relative;
+  z-index: 0;
+}
+.read-content{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  top:50px;
+}
+.readmore{
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: center;
+}
+.demo-head{
+  display: flex;
+  text-align:center ;
+  justify-content: center;
+  flex-direction: column;
+  width: 1440px;
+  height: 300px;
+  padding: 32px 0px 32px 0px;
+  gap:32px; 
+}
+ 
+.button-demo{
+  display:flex;
+ 
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 178px;
+  height: 52px;
+  padding: 14px 32px 14px 32px;
+ 
+  background-color:var(  --clr-accent-400);
+  border-color: var(  --clr-accent-400);
+}
